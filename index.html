@@ -42,6 +42,9 @@
     .hidden-ui { display: none !important; }
     .progress-fill { transition: width .45s ease; }
     .chip { border: 1px solid rgba(34,211,238,.35); background: rgba(34,211,238,.09); }
+    .submit-btn, .next-btn { background: #22d3ee; color: #0f172a; }
+    .retry-btn { background: #f59e0b; color: #0f172a; }
+    .submit-btn:hover, .next-btn:hover, .retry-btn:hover { filter: brightness(1.08); }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
   </style>
   <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" type="text/javascript" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
@@ -152,15 +155,15 @@
         <aside class="mission-panel rounded-2xl p-5">
          <div class="mb-4 flex items-center gap-2">
           <i data-lucide="box" class="text-cyan-300"></i>
-          <h3 data-template-id="components-heading" class="canva-text font-bold"></h3>
+          <h3 data-template-id="components-heading" class="canva-text font-bold">Available Components</h3>
          </div>
-         <p data-template-id="components-help" class="canva-text mb-4 text-sm text-slate-300"></p>
+         <p data-template-id="components-help" class="canva-text mb-4 text-sm text-slate-300">Drag a card, or select it and then choose a workflow slot.</p>
          <div class="component-bay grid gap-3"></div>
         </aside>
         <section class="mission-panel rounded-2xl p-5">
          <div class="mb-4 flex items-center gap-2">
           <i data-lucide="git-branch" class="text-cyan-300"></i>
-          <h3 data-template-id="workflow-heading" class="canva-text font-bold"></h3>
+          <h3 data-template-id="workflow-heading" class="canva-text font-bold">Workflow Canvas</h3>
          </div>
          <div class="slot-stack"></div>
         </section>
@@ -168,22 +171,22 @@
          <div class="mission-panel rounded-2xl p-5">
           <div class="mb-3 flex items-center gap-2">
            <span class="status-dot"></span>
-           <h3 data-template-id="status-heading" class="canva-text font-bold"></h3>
+           <h3 data-template-id="status-heading" class="canva-text font-bold">Engineering Status</h3>
           </div>
           <p id="status-message" class="text-sm leading-relaxed text-slate-300" aria-live="polite">Place every component into the workflow.</p>
          </div>
          <div class="rounded-2xl border border-amber-400/30 bg-amber-400/10 p-5">
           <div class="mb-2 flex items-center gap-2 text-amber-300">
            <i data-lucide="lightbulb"></i>
-           <h3 data-template-id="hint-heading" class="canva-text font-bold"></h3>
+           <h3 data-template-id="hint-heading" class="canva-text font-bold">Connection Hint</h3>
           </div>
           <p class="hint-message text-sm leading-relaxed text-amber-100"></p>
          </div>
-         <div class="flex flex-wrap gap-3"><button type="button" data-template-id="submit-button" class="control submit-btn canva-button rounded-xl px-5 py-3 font-bold disabled:cursor-not-allowed disabled:opacity-40" disabled=""></button> <button type="button" data-template-id="retry-button" class="control retry-btn canva-button hidden-ui rounded-xl px-5 py-3 font-bold"></button> <button type="button" data-template-id="next-button" class="control next-btn canva-button hidden-ui rounded-xl px-5 py-3 font-bold"></button>
+         <div class="flex flex-wrap gap-3"><button type="button" data-template-id="submit-button" class="control submit-btn canva-button rounded-xl px-5 py-3 font-bold disabled:cursor-not-allowed disabled:opacity-40" disabled>Submit Workflow</button> <button type="button" data-template-id="retry-button" class="control retry-btn canva-button hidden-ui rounded-xl px-5 py-3 font-bold">Retry Workflow</button> <button type="button" data-template-id="next-button" class="control next-btn canva-button hidden-ui rounded-xl px-5 py-3 font-bold">Next Challenge</button>
          </div>
          <div class="feedback-panel hidden-ui rounded-2xl border p-4 text-sm leading-relaxed" aria-live="polite"></div>
          <div class="explanation-panel hidden-ui rounded-2xl border border-cyan-300/25 bg-cyan-300/5 p-5">
-          <h3 data-template-id="explanation-heading" class="canva-text mb-2 font-bold text-cyan-200"></h3>
+          <h3 data-template-id="explanation-heading" class="canva-text mb-2 font-bold text-cyan-200">Engineering Explanation</h3>
           <p class="explanation-message text-sm leading-relaxed text-slate-200"></p>
          </div>
         </aside>
