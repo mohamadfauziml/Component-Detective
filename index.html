@@ -1,485 +1,337 @@
 <!doctype html>
-<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260730-01-daaccc9","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,0","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHO2EIdDP0,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YADy3sAhvXQ,0","Oleo Script":"YACgEQQ14jI,0","Playfair Display":"YAFdJhem5V8,1","Poppins":"YAE5fPSY9qM,0","Press Start 2P":"YAFyGr-8pmQ,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/a27874207e105461.telemetry_sdk.js" integrity="sha512-wgI5N9F7oA2h3vH+benMYIv4wGqTct4nKWakqgvfgRyBLmfYq8q/fi6gkfWKd2hMsyN+VQ/qOAOpxybwkcoxlA=="></script>
+<html lang="en"><head><script>window["__codeletBootstrap__"]=JSON.parse('{"A":"A","B":"20260730-03-db92621","C":{"Abril Fatface":"YACgEZbkUVE,0","Alfa Slab One":"YACgEYS9sJU,0","Anton":"YACgEcYqQ-A,0","Archivo":"YAHO2-t-jNE,0","Arial":"YAGyDvJ_4Ts,0","Bebas Neue":"YACgESME5ew,0","Broken Glyph":"YADZ-exUkv0,0","Canva Sans":"YAFdJjTk5UU,0","Caveat":"YALBs2ploWQ,0","Comic Sans MS":"YAHO2VMiyZo,0","Cormorant Garamond":"YAFdJhX-538,0","Courier New":"YAGzXiGs0_8,0","DM Sans":"YAD1aU3sLnI,0","DM Serif Display":"YAD1aYG82rc,0","Forum":"YACgEcnnqB4,0","Fraunces":"YAEul-FRQw4,0","Georgia":"YAGzXkO0pEM,0","Ghost Mono":"YAHO2EIdDP0,0","Helvetica Neue":"YAFcf6CtJfI,0","Impact":"YAFcfnjI7Vk,0","Inter":"YAFdJvSyp_k,3","Iowan Old Style":"YAGNIFa8j9o,0","Jacques Francois":"YAHO2a5g66Q,0","JetBrains Mono":"YADy3sAhvXQ,0","Oleo Script":"YACgEQQ14jI,0","Playfair Display":"YAFdJhem5V8,1","Poppins":"YAE5fPSY9qM,0","Press Start 2P":"YAFyGr-8pmQ,0","Source Sans 3":"YAG4lO1Mj10,0","Space Grotesk":"YAHO2sjPCSM,0","Times New Roman":"YAGzXW3gftg,0","Times":"YAGzXW3gftg,0","Trebuchet MS":"YAFcfrglpVA,0","Verdana":"YAGzXTctYtQ,0","Work Sans":"YAGXhLOKv44,0","Yellowtail":"YACgEYG4kG4,0"}}');</script><script src="/_sdk/a27874207e105461.telemetry_sdk.js" integrity="sha512-wgI5N9F7oA2h3vH+benMYIv4wGqTct4nKWakqgvfgRyBLmfYq8q/fi6gkfWKd2hMsyN+VQ/qOAOpxybwkcoxlA=="></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Component Detective</title>
+  <title>Mission 1: Component Detective</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/lucide@0.263.0/dist/umd/lucide.min.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;family=Poppins:wght@600;700;800&amp;display=swap" rel="stylesheet">
   <style>
-    :root {
-      --blue: #2563EB;
-      --teal: #14B8A6;
-      --ink: #10213d;
-      --muted: #64748b;
-      --line: #dbe5f0;
-      --surface: #ffffff;
-      --success: #22C55E;
-      --warning: #F59E0B;
-      --danger: #EF4444;
-    }
-    * { box-sizing: border-box; }
-    body { margin: 0; font-family: Inter, sans-serif; color: var(--ink); }
-    .command-shell { width: 100%; min-height: calc(100 * min(var(--vh, 1vh), 1vh)); overflow-x: hidden; }
-    .heading-font { font-family: Poppins, sans-serif; }
-    .grid-bg {
-      background-image: linear-gradient(rgba(37,99,235,.055) 1px, transparent 1px), linear-gradient(90deg, rgba(37,99,235,.055) 1px, transparent 1px);
-      background-size: 32px 32px;
-    }
-    .screen { display: none; animation: reveal .35s ease both; }
-    .screen.active { display: block; }
-    @keyframes reveal { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
-    .choice-card {
-      border: 2px solid var(--line);
-      background: #fff;
-      transition: border-color .18s ease, transform .18s ease, box-shadow .18s ease;
-    }
-    .choice-card:hover { border-color: #93c5fd; transform: translateY(-2px); }
-    .choice-card:focus-visible, button:focus-visible, textarea:focus-visible {
-      outline: 3px solid #fbbf24;
-      outline-offset: 3px;
-    }
-    .choice-card.selected { border-color: var(--blue); background: #eff6ff; box-shadow: 0 8px 22px rgba(37,99,235,.12); }
-    .choice-card.correct-choice { border-color: var(--success); background: #f0fdf4; }
-    .choice-card.wrong-choice { border-color: var(--danger); background: #fef2f2; }
-    .choice-card:disabled { cursor: default; transform: none; }
-    .feedback { display: none; }
-    .feedback.visible { display: block; animation: reveal .25s ease both; }
-    .progress-step.done { background: var(--success); color: white; border-color: var(--success); }
-    .progress-step.current { background: var(--blue); color: white; border-color: var(--blue); }
-    .report-meter { height: 10px; border-radius: 99px; overflow: hidden; background: #e2e8f0; }
-    .report-meter > span { display: block; height: 100%; border-radius: inherit; background: linear-gradient(90deg, var(--teal), var(--blue)); transition: width .45s ease; }
-    .pulse-ring { animation: pulse 1.8s ease-in-out infinite; }
-    @keyframes pulse { 50% { box-shadow: 0 0 0 16px rgba(34,197,94,0); } }
+    :root { --navy:#0F172A; --panel:#17243c; --line:#28415f; --cyan:#22D3EE; --green:#10B981; --amber:#F59E0B; --red:#EF4444; --ink:#F8FAFC; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:"DM Sans",sans-serif; color:var(--ink); }
+    .mission-shell { width:100%; min-height:calc(100 * min(var(--vh, 1vh), 1vh)); background-image:linear-gradient(rgba(34,211,238,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(34,211,238,.035) 1px,transparent 1px); background-size:32px 32px; }
+    .mission-panel { background:rgba(23,36,60,.94); border:1px solid var(--line); box-shadow:0 18px 45px rgba(0,0,0,.22); }
+    .case-view { animation:rise .38s ease both; }
+    @keyframes rise { from {opacity:0; transform:translateY(10px)} to {opacity:1; transform:translateY(0)} }
+    .status-dot { width:9px; height:9px; border-radius:999px; background:var(--green); box-shadow:0 0 12px var(--green); display:inline-block; }
+    .option-button { min-height:56px; border:1px solid #365273; background:#132139; transition:.2s ease; }
+    .option-button:hover:not(:disabled), .option-button.is-selected { border-color:var(--cyan); background:#12314a; box-shadow:inset 3px 0 0 var(--cyan); }
+    .option-button.is-correct { border-color:var(--green)!important; background:rgba(16,185,129,.16)!important; box-shadow:inset 3px 0 0 var(--green)!important; }
+    .option-button.is-wrong { border-color:var(--red)!important; background:rgba(239,68,68,.14)!important; box-shadow:inset 3px 0 0 var(--red)!important; }
+    .option-button:disabled { cursor:default; }
+    .primary-action { min-height:52px; transition:transform .18s ease,filter .18s ease; }
+    .primary-action:hover { transform:translateY(-1px); filter:brightness(1.08); }
+    button:focus-visible, textarea:focus-visible { outline:3px solid var(--cyan); outline-offset:3px; }
+    .hidden-view { display:none!important; }
+    .progress-fill { transition:width .45s ease; }
+    .feedback { border-left:4px solid var(--cyan); }
+    .feedback.success { border-left-color:var(--green); }
+    .feedback.error { border-left-color:var(--red); }
+    textarea { resize:vertical; }
+    @media (max-width:640px) { .case-main { padding:1rem; } .header-copy { display:none; } }
   </style>
   <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" type="text/javascript" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
   <script src="/_sdk/6030e540d4419216.resizing_sdk.js" type="text/javascript" integrity="sha512-b5KWzyoXsbWP4smq4sftIi6Kts4YVBpBsz0BwCViwbBJkK64a3/Z6ZMdWA+qnplNcXw4mhZeqvQi3mOosiRJdA=="></script>
  </head>
- <body data-template-id="__page-root" style="background: rgb(248, 250, 252);">
-  <div class="command-shell grid-bg">
-   <header id="mission-header" class="hidden border-b border-slate-200 bg-white/90 backdrop-blur">
-    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 flex flex-wrap gap-4 items-center justify-between">
+ <body data-template-id="__page-root" style="background: rgb(15, 23, 42);">
+  <div class="mission-shell">
+   <header class="w-full border-b border-slate-700/80 bg-slate-950/70 backdrop-blur">
+    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between gap-4">
      <div class="flex items-center gap-3">
-      <div class="w-10 h-10 rounded-xl bg-blue-600 text-white grid place-items-center" aria-hidden="true"><i data-lucide="radar" class="w-5 h-5"></i>
+      <div class="w-10 h-10 rounded-xl bg-cyan-400/15 border border-cyan-300/40 flex items-center justify-center text-cyan-300"><i data-lucide="radar" aria-hidden="true"></i>
       </div>
       <div>
-       <p data-template-id="header-mission-label" class="canva-text text-xs font-bold uppercase tracking-widest" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 12px;">Mission 1 of 4</p>
-       <p data-template-id="header-game-label" class="canva-text text-sm font-semibold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 14px;">Operation SmartCity</p>
+       <p data-template-id="header-kicker" class="canva-text text-xs font-bold tracking-[.18em] uppercase" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">SmartCity Operations Centre</p>
+       <p data-template-id="header-title" class="canva-text header-copy font-semibold" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">IoT Systems Investigation</p>
       </div>
      </div>
-     <div class="flex items-center gap-3">
-      <div class="text-right">
-       <p data-template-id="score-label" class="canva-text text-xs font-semibold uppercase tracking-wide" style="color: rgb(100, 116, 139); font-weight: 700; font-style: normal; font-size: 12px;">Mission score</p>
-       <p id="score-display" class="text-xl font-bold text-blue-700" aria-live="polite">0 / 50</p>
+     <div class="flex items-center gap-3 sm:gap-5 text-right">
+      <div>
+       <p data-template-id="case-label" class="canva-text text-[11px] uppercase tracking-wider text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Cases cleared</p>
+       <p id="case-count" class="font-bold text-cyan-300 tabular-nums" aria-live="polite">0 / 5</p>
       </div>
-      <div class="w-12 h-12 rounded-full bg-teal-50 text-teal-600 grid place-items-center" aria-hidden="true"><i data-lucide="cpu" class="w-6 h-6"></i>
+      <div class="border-l border-slate-700 pl-3 sm:pl-5">
+       <p data-template-id="score-label" class="canva-text text-[11px] uppercase tracking-wider text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Mission score</p>
+       <p id="score-count" class="font-bold text-emerald-400 tabular-nums" aria-live="polite">0 / 50</p>
       </div>
      </div>
     </div>
-    <div class="w-full max-w-6xl mx-auto px-4 sm:px-6 pb-4">
-     <div class="flex justify-between items-center mb-2"><span id="case-display" class="text-sm font-semibold text-slate-700">Case 1 / 5</span> <span id="completion-display" class="text-sm text-slate-500">0% complete</span>
-     </div>
-     <div class="h-2.5 bg-slate-200 rounded-full overflow-hidden" aria-label="Mission progress">
-      <div id="progress-fill" class="h-full bg-blue-600 rounded-full transition-all duration-500" style="width:0%"></div>
-     </div>
-     <div class="mt-3 flex justify-between" aria-hidden="true"><span class="progress-step current w-7 h-7 border-2 border-slate-300 rounded-full text-xs font-bold grid place-items-center">1</span> <span class="progress-step w-7 h-7 border-2 border-slate-300 rounded-full text-xs font-bold grid place-items-center">2</span> <span class="progress-step w-7 h-7 border-2 border-slate-300 rounded-full text-xs font-bold grid place-items-center">3</span> <span class="progress-step w-7 h-7 border-2 border-slate-300 rounded-full text-xs font-bold grid place-items-center">4</span> <span class="progress-step w-7 h-7 border-2 border-slate-300 rounded-full text-xs font-bold grid place-items-center">5</span>
-     </div>
+    <div class="w-full h-1 bg-slate-800" aria-label="Mission progress">
+     <div id="progress-fill" class="progress-fill h-full bg-cyan-400" style="width:0%"></div>
     </div>
    </header>
-   <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-6 sm:py-10">
-    <section id="welcome" class="screen active">
-     <div class="grid lg:grid-cols-2 gap-8 items-center min-h-[620px]">
-      <div class="order-2 lg:order-1">
-       <div data-template-id="welcome-eyebrow" class="canva-tag inline-flex px-3 py-1 rounded-full text-xs font-bold tracking-wider uppercase mb-5" style="background: rgb(219, 234, 254); color: rgb(29, 78, 216); font-weight: 700; font-style: normal; font-size: 16px;">Mission 1 of 4</div>
-       <h1 data-template-id="welcome-title" class="canva-text heading-font font-extrabold text-4xl sm:text-5xl lg:text-6xl leading-tight" style="color: rgb(16, 33, 61); font-weight: 800; font-style: normal; font-size: 32px;">COMPONENT DETECTIVE</h1>
-       <p data-template-id="welcome-operation" class="canva-text heading-font font-semibold text-xl mt-3" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 22px;">Operation SmartCity</p>
-       <div class="mt-7 space-y-3 text-slate-600 leading-7 max-w-xl">
-        <p data-template-id="welcome-line-1" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 18px;">Welcome, Junior IoT Systems Engineer.</p>
-        <p data-template-id="welcome-line-2" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">Several SmartCity systems are malfunctioning because their IoT documentation has been lost.</p>
-        <p data-template-id="welcome-line-3" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">Investigate each case. Identify the correct IoT component.</p>
-        <p data-template-id="welcome-line-4" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 700; font-style: normal; font-size: 16px;">Restore the SmartCity systems.</p>
-       </div><button id="start-btn" type="button" data-template-id="start-button" class="canva-button mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold shadow-lg shadow-blue-200 hover:shadow-xl transition" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">START MISSION</button>
-      </div>
-      <div class="order-1 lg:order-2 relative">
-       <div class="absolute -inset-4 rounded-[2rem] bg-teal-200/30 blur-2xl"></div>
-       <div class="relative rounded-[1.6rem] overflow-hidden shadow-2xl border border-white"><img data-template-id="hero-smartcity-image" loading="lazy" class="canva-image w-full h-[340px] sm:h-[470px] object-cover" src="https://images.pexels.com/photos/32026165/pexels-photo-32026165.jpeg" alt="A high-tech command center with illuminated digital screens in a futuristic setting.">
-        <div class="absolute inset-x-0 bottom-0 p-5 bg-gradient-to-t from-slate-950/80 to-transparent">
-         <div class="flex items-center gap-2 text-white text-sm font-semibold"><span class="w-2.5 h-2.5 rounded-full bg-green-400 pulse-ring"></span> <span data-template-id="hero-status" class="canva-text" style="color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 13px;">SMARTCITY COMMAND CENTER ONLINE</span>
-         </div>
-        </div>
+   <main class="w-full max-w-6xl mx-auto px-4 sm:px-6 py-7 sm:py-10">
+    <section id="briefing-view" class="case-view max-w-3xl mx-auto py-5 sm:py-12">
+     <div class="mission-panel rounded-3xl overflow-hidden">
+      <div class="h-2 bg-cyan-400"></div>
+      <div class="p-7 sm:p-12">
+       <div class="flex items-center gap-2 text-cyan-300 mb-7">
+        <span class="status-dot"></span><span data-template-id="briefing-status" class="canva-text text-xs font-bold tracking-[.16em] uppercase" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">Systems status: investigation required</span>
        </div>
+       <p data-template-id="mission-number" class="canva-text text-sm font-bold tracking-[.2em] uppercase text-amber-300" style="color: rgb(252, 211, 77); font-weight: 700; font-style: normal; font-size: 16px;">Mission 1</p>
+       <h1 data-template-id="mission-title" class="canva-text mt-2 text-4xl sm:text-5xl font-bold tracking-tight" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Component Detective</h1>
+       <div class="mt-8 border-l-2 border-cyan-400 pl-5 space-y-4">
+        <p data-template-id="briefing-welcome" class="canva-text text-xl font-semibold text-cyan-100" style="color: rgb(207, 250, 254); font-weight: 600; font-style: normal; font-size: 16px;">Welcome Engineer.</p>
+        <p data-template-id="briefing-copy" class="canva-text text-slate-300 leading-7" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Several SmartCity IoT systems have failed. Your mission is to investigate each incident and determine which IoT component is responsible.</p>
+       </div><button id="start-btn" data-template-id="start-button" type="button" class="canva-button primary-action mt-10 w-full sm:w-auto px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Start Investigation</button>
       </div>
      </div>
     </section>
-    <section id="briefing" class="screen">
-     <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 p-6 sm:p-10">
-      <div class="flex items-center gap-4 mb-7">
-       <div class="w-14 h-14 rounded-2xl bg-blue-100 text-blue-700 grid place-items-center">
-        <i data-lucide="clipboard-list" aria-hidden="true"></i>
-       </div>
-       <div>
-        <p data-template-id="briefing-kicker" class="canva-text text-xs font-bold tracking-widest uppercase" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 16px;">Command Center Dispatch</p>
-        <h2 data-template-id="briefing-title" class="canva-text heading-font font-bold text-3xl" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 24px;">Mission Briefing</h2>
-       </div>
-      </div>
-      <div class="border-l-4 border-teal-500 pl-5 space-y-4 text-slate-600 leading-7">
-       <p data-template-id="briefing-text-1" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">Five SmartCity systems have lost their technical documentation.</p>
-       <p data-template-id="briefing-text-2" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">Your task is to investigate each real-world case and identify the IoT component responsible for the highlighted function.</p>
-       <p data-template-id="briefing-text-3" class="canva-text" style="color: rgb(71, 85, 105); font-weight: 600; font-style: normal; font-size: 16px;">Your first answer earns the highest score, so analyse each clue carefully before submitting.</p>
-      </div><button id="briefing-next" type="button" data-template-id="next-briefing-button" class="canva-button mt-8 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">NEXT</button>
-     </div>
-    </section>
-    <section id="how-to-play" class="screen">
-     <div class="text-center max-w-2xl mx-auto">
-      <p data-template-id="how-kicker" class="canva-text text-xs font-bold tracking-widest uppercase" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 16px;">Mission Preparation</p>
-      <h2 data-template-id="how-title" class="canva-text heading-font font-bold text-3xl sm:text-4xl mt-2" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 24px;">How To Play</h2>
-      <p data-template-id="how-intro" class="canva-text text-slate-600 mt-3" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Learn the six major IoT components before beginning your investigations.</p>
-     </div>
-     <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-8">
-      <article data-template-id="component-sensor-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="scan-line" class="w-7 h-7 text-blue-600 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-sensor-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Sensor</h3>
-       <p data-template-id="component-sensor-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Collects information from the environment.</p>
-      </article>
-      <article data-template-id="component-connectivity-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="wifi" class="w-7 h-7 text-teal-600 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-connectivity-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Connectivity</h3>
-       <p data-template-id="component-connectivity-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Transmits data between devices and systems.</p>
-      </article>
-      <article data-template-id="component-processing-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="microchip" class="w-7 h-7 text-violet-600 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-processing-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Processing Unit</h3>
-       <p data-template-id="component-processing-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Analyses information and makes decisions.</p>
-      </article>
-      <article data-template-id="component-cloud-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="cloud" class="w-7 h-7 text-sky-600 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-cloud-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Cloud Platform</h3>
-       <p data-template-id="component-cloud-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Stores, manages and presents IoT data.</p>
-      </article>
-      <article data-template-id="component-actuator-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="zap" class="w-7 h-7 text-amber-500 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-actuator-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Actuator</h3>
-       <p data-template-id="component-actuator-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Performs a physical action.</p>
-      </article>
-      <article data-template-id="component-ui-card" class="canva-card bg-white rounded-2xl border border-slate-200 p-5" style="background: rgb(255, 255, 255);"><i data-lucide="monitor" class="w-7 h-7 text-rose-500 mb-4" aria-hidden="true"></i>
-       <h3 data-template-id="component-ui-title" class="canva-text font-bold" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">User Interface</h3>
-       <p data-template-id="component-ui-desc" class="canva-text text-sm text-slate-500 mt-1" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Allows people to view and control a system.</p>
-      </article>
-     </div>
-     <div data-template-id="instruction-panel" class="canva-panel mt-7 rounded-2xl p-6 border" style="background: rgb(236, 254, 255); color: rgb(16, 33, 61);">
-      <h3 data-template-id="instruction-title" class="canva-text font-bold text-lg" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 19px;">Investigation Protocol</h3>
-      <ol class="mt-3 space-y-2 text-slate-700 list-decimal list-inside">
-       <li data-template-id="instruction-1" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Each investigation contains one real-world SmartCity scenario.</li>
-       <li data-template-id="instruction-2" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Read the case carefully and choose the component responsible for the highlighted task.</li>
-       <li data-template-id="instruction-3" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 400; font-style: normal; font-size: 16px;">Submit your answer and read the explanation before continuing.</li>
-       <li data-template-id="instruction-4" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 700; font-style: normal; font-size: 16px;">Your mission score depends on your first attempt.</li>
-      </ol>
-     </div>
-     <div class="text-center mt-8"><button id="instructions-next" type="button" data-template-id="begin-cases-button" class="canva-button inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold" style="background: rgb(20, 184, 166); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">BEGIN INVESTIGATIONS</button>
-     </div>
-    </section>
-    <section id="game" class="screen">
-     <article class="max-w-4xl mx-auto bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 overflow-hidden">
-      <div class="p-6 sm:p-9 border-b border-slate-100">
-       <div class="flex items-start justify-between gap-4">
-        <div>
-         <p id="case-kicker" class="text-xs font-bold tracking-widest uppercase text-teal-600">Investigation</p>
-         <h2 id="case-title" class="heading-font font-bold text-3xl mt-2"></h2>
-        </div>
-        <div class="w-12 h-12 flex-none rounded-xl bg-blue-50 text-blue-600 grid place-items-center">
-         <i id="case-icon" data-lucide="search" aria-hidden="true"></i>
-        </div>
-       </div>
-       <div class="mt-6 bg-slate-50 rounded-2xl p-5 border border-slate-100">
-        <p class="text-xs font-bold tracking-widest uppercase text-slate-400 mb-2">Scenario</p>
-        <p id="case-scenario" class="text-slate-700 leading-7 whitespace-pre-line"></p>
-       </div>
-       <h3 id="case-question" class="heading-font font-semibold text-xl mt-6"></h3>
-      </div>
-      <div class="p-6 sm:p-9">
-       <div id="choice-list" class="grid sm:grid-cols-2 gap-3" role="radiogroup" aria-label="Answer choices"></div>
-       <div class="mt-6 flex flex-wrap items-center gap-3"><button id="submit-answer" type="button" data-template-id="submit-answer-button" class="canva-button px-5 py-3 rounded-xl font-bold disabled:opacity-50 disabled:cursor-not-allowed" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">SUBMIT ANSWER</button>
-        <p id="selection-note" class="text-sm text-slate-500" aria-live="polite"></p>
-       </div>
-       <div id="feedback-correct" class="feedback mt-6 rounded-2xl border border-green-200 bg-green-50 p-5">
-        <div class="flex gap-3">
-         <i data-lucide="circle-check" class="text-green-600 flex-none" aria-hidden="true"></i>
-         <div>
-          <h3 id="correct-heading" class="font-bold text-green-800"></h3>
-          <p id="correct-text" class="text-green-800/90 mt-2 leading-6 whitespace-pre-line"></p>
-         </div>
-        </div>
-       </div>
-       <div id="feedback-incorrect" class="feedback mt-6 rounded-2xl border border-amber-200 bg-amber-50 p-5">
-        <div class="flex gap-3">
-         <i data-lucide="circle-alert" class="text-amber-600 flex-none" aria-hidden="true"></i>
-         <div>
-          <h3 id="incorrect-heading" class="font-bold text-amber-800"></h3>
-          <p id="incorrect-text" class="text-amber-900/90 mt-2 leading-6 whitespace-pre-line"></p>
-         </div>
-        </div>
-       </div>
-       <div id="continue-wrap" class="hidden mt-6 text-right"><button id="continue-case" type="button" data-template-id="continue-button" class="canva-button inline-flex items-center gap-2 px-5 py-3 rounded-xl font-bold" style="background: rgb(20, 184, 166); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">CONTINUE</button>
-       </div>
-      </div>
-     </article>
-    </section>
-    <section id="report" class="screen">
-     <div class="max-w-4xl mx-auto">
-      <div class="text-center">
-       <p data-template-id="report-kicker" class="canva-text text-xs font-bold tracking-widest uppercase" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 16px;">Investigation Complete</p>
-       <h2 data-template-id="report-title" class="canva-text heading-font font-bold text-3xl sm:text-4xl mt-2" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 24px;">Mission Report</h2>
-      </div>
-      <div class="grid md:grid-cols-3 gap-4 mt-8">
-       <article data-template-id="report-score-card" class="canva-card rounded-2xl p-6 border bg-white" style="background: rgb(239, 246, 255);">
-        <p data-template-id="report-score-label" class="canva-text text-sm font-semibold" style="color: rgb(29, 78, 216); font-weight: 700; font-style: normal; font-size: 16px;">Total Score</p>
-        <p id="report-score" class="heading-font text-4xl font-bold mt-3 text-blue-700">0 / 50</p>
+    <section id="howto-view" class="case-view hidden-view max-w-3xl mx-auto">
+     <div class="mission-panel rounded-3xl p-7 sm:p-10">
+      <p data-template-id="howto-kicker" class="canva-text text-sm font-bold tracking-[.18em] uppercase text-cyan-300" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">Mission protocol</p>
+      <h1 data-template-id="howto-title" class="canva-text mt-2 text-3xl sm:text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">How to play</h1>
+      <div class="grid sm:grid-cols-3 gap-4 mt-8">
+       <article data-template-id="step-one" class="canva-card rounded-2xl p-5 border border-slate-700" style="background: rgb(23, 36, 60);"><span class="text-cyan-300 font-bold">01</span>
+        <p data-template-id="step-one-text" class="canva-text mt-3 text-slate-200 leading-6" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Each case contains clues. Read every clue carefully.</p>
        </article>
-       <article data-template-id="report-first-card" class="canva-card rounded-2xl p-6 border bg-white" style="background: rgb(240, 253, 250);">
-        <p data-template-id="report-first-label" class="canva-text text-sm font-semibold" style="color: rgb(15, 118, 110); font-weight: 700; font-style: normal; font-size: 16px;">Correct on First Attempt</p>
-        <p id="report-first" class="heading-font text-4xl font-bold mt-3 text-teal-600">0 / 5</p>
+       <article data-template-id="step-two" class="canva-card rounded-2xl p-5 border border-slate-700" style="background: rgb(23, 36, 60);"><span class="text-cyan-300 font-bold">02</span>
+        <p data-template-id="step-two-text" class="canva-text mt-3 text-slate-200 leading-6" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Choose the IoT component responsible for the system failure.</p>
        </article>
-       <article data-template-id="report-badge-card" class="canva-card rounded-2xl p-6 border bg-white" style="background: rgb(255, 251, 235);">
-        <p data-template-id="report-badge-label" class="canva-text text-sm font-semibold" style="color: rgb(180, 83, 9); font-weight: 700; font-style: normal; font-size: 16px;">Performance Badge</p>
-        <p id="report-badge" class="heading-font text-xl font-bold mt-3 text-slate-800">—</p>
+       <article data-template-id="step-three" class="canva-card rounded-2xl p-5 border border-slate-700" style="background: rgb(23, 36, 60);"><span class="text-cyan-300 font-bold">03</span>
+        <p data-template-id="step-three-text" class="canva-text mt-3 text-slate-200 leading-6" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Submit your finding, review the engineering feedback, then continue.</p>
        </article>
       </div>
-      <div class="mt-5 bg-white rounded-2xl border border-slate-200 p-6">
-       <div class="flex justify-between text-sm font-semibold">
-        <span data-template-id="report-progress-label" class="canva-text" style="color: rgb(51, 65, 85); font-weight: 700; font-style: normal; font-size: 16px;">Mission Performance</span><span id="report-percent">0%</span>
-       </div>
-       <div class="report-meter mt-3">
-        <span id="report-meter-fill" style="width:0%"></span>
-       </div>
-      </div>
-      <div data-template-id="report-summary-panel" class="canva-panel mt-5 rounded-2xl p-6 border" style="background: rgb(248, 250, 252);">
-       <h3 data-template-id="report-summary-title" class="canva-text heading-font font-bold text-xl" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 19px;">Mission Summary</h3>
-       <p id="report-summary" class="mt-3 text-slate-700 leading-7"></p>
-      </div>
-      <div class="text-center mt-8">
-       <button id="report-next" type="button" data-template-id="reflection-button" class="canva-button inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">CONTINUE TO REFLECTION</button>
-      </div>
+      <p data-template-id="progress-note" class="canva-text mt-7 text-sm text-amber-200" style="color: rgb(253, 230, 138); font-weight: 400; font-style: normal; font-size: 16px;">Mission progress begins at 0%. Correct first-attempt investigations earn 10 points.</p><button id="begin-practice-btn" data-template-id="begin-practice-button" type="button" class="canva-button primary-action mt-8 w-full sm:w-auto px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Begin Practice Case</button>
      </div>
     </section>
-    <section id="reflection" class="screen">
-     <div class="max-w-3xl mx-auto bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 p-6 sm:p-10">
-      <p data-template-id="reflection-kicker" class="canva-text text-xs font-bold tracking-widest uppercase" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 16px;">Final Engineering Note</p>
-      <h2 data-template-id="reflection-title" class="canva-text heading-font font-bold text-3xl mt-2" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 24px;">Mission Reflection</h2>
-      <p data-template-id="reflection-intro" class="canva-text text-slate-600 mt-3" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Reflection is not scored. Use this space to connect your learning to a real-world IoT system.</p>
-      <form id="reflection-form" class="mt-7"><label data-template-id="reflection-label" for="reflection-input" class="canva-text block font-semibold mb-2" style="color: rgb(16, 33, 61); font-weight: 600; font-style: normal; font-size: 16px;">Which IoT component do you think is the most critical in an IoT system? Explain your answer using one real-world example.</label> <textarea id="reflection-input" rows="7" data-template-id="reflection-placeholder" class="canva-input w-full rounded-xl border border-slate-300 p-4 text-slate-700 focus:border-blue-500 resize-y" style="font-weight: 400; font-style: normal; font-size: 16px;">Write your reflection here...</textarea>
-       <p data-template-id="reflection-note" class="canva-text text-sm text-slate-500 mt-2" style="color: rgb(100, 116, 139); font-weight: 400; font-style: normal; font-size: 16px;">Your response will not affect your mission score.</p><button type="submit" data-template-id="complete-button" class="canva-button mt-6 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold" style="background: rgb(20, 184, 166); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">COMPLETE MISSION</button>
-      </form>
+    <section id="investigation-view" class="case-view hidden-view">
+     <div class="flex flex-wrap justify-between items-end gap-3 mb-5">
+      <div>
+       <p id="case-kicker" class="text-sm font-bold tracking-[.16em] uppercase text-cyan-300"></p>
+       <h1 id="case-title" class="text-3xl sm:text-4xl font-bold mt-1"></h1>
+      </div>
+      <div class="flex items-center gap-2 text-sm text-slate-300">
+       <span class="status-dot"></span><span data-template-id="case-status" class="canva-text" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Live investigation</span>
+      </div>
+     </div>
+     <div id="case-practice" class="investigation case-main mission-panel rounded-3xl p-5 sm:p-8">
+      <p data-template-id="practice-scenario" class="canva-text text-lg leading-8 text-slate-100" style="color: rgb(248, 250, 252); font-weight: 400; font-style: normal; font-size: 16px;">A smart greenhouse always reports 25°C even during an extremely hot afternoon.</p>
+      <div data-template-id="practice-evidence-panel" class="canva-panel mt-7 rounded-2xl border border-slate-700 p-5" style="background: rgb(23, 36, 60);">
+       <h2 data-template-id="evidence-heading" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Evidence log</h2>
+       <ul class="mt-4 space-y-3 text-slate-200">
+        <li data-template-id="practice-e1" class="canva-text" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">✓ Wi-Fi connection is active.</li>
+        <li data-template-id="practice-e2" class="canva-text" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">✓ Dashboard updates every minute.</li>
+        <li data-template-id="practice-e3" class="canva-text" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">✓ Cooling fan operates correctly when manually activated.</li>
+        <li data-template-id="practice-e4" class="canva-text" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">✓ Temperature reading never changes.</li>
+       </ul>
+      </div>
+      <h2 data-template-id="practice-question" class="canva-text mt-8 text-xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 24px;">Which IoT component is most likely faulty?</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5 answer-list"><button data-template-id="practice-a1" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Sensor" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Sensor</button> <button data-template-id="practice-a2" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Connectivity" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Connectivity</button> <button data-template-id="practice-a3" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Cloud Platform" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Cloud Platform</button> <button data-template-id="practice-a4" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Actuator" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Actuator</button>
+      </div><button data-template-id="submit-button" class="canva-button primary-action submit-btn hidden-view mt-6 px-7 rounded-xl bg-amber-400 text-slate-950 font-bold" type="button" style="background: rgb(245, 158, 11); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Engineering Finding</button>
+      <div class="feedback hidden-view mt-6 rounded-r-xl bg-slate-900/70 p-5">
+       <h3 data-template-id="feedback-heading" class="canva-text font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 19px;">Engineering feedback</h3>
+       <p data-template-id="practice-feedback" class="canva-text mt-2 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Sensors collect environmental information. Since every other component is functioning correctly but the temperature reading never changes, the temperature sensor is most likely faulty. Connectivity is working because updated data reaches the dashboard; the cloud displays information but does not measure temperature; the fan actuator works when manually activated.</p>
+      </div><button data-template-id="continue-button" class="canva-button primary-action next-btn hidden-view mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" type="button" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Continue to Case 1</button>
+     </div>
+     <div id="case-warehouse" class="investigation case-main mission-panel rounded-3xl p-5 sm:p-8 hidden-view">
+      <p data-template-id="warehouse-scenario" class="canva-text text-lg leading-8 text-slate-100" style="color: rgb(248, 250, 252); font-weight: 400; font-style: normal; font-size: 16px;">The warehouse temperature is detected correctly. The dashboard shows accurate readings. However, the cooling fan never starts.</p>
+      <div data-template-id="warehouse-evidence-panel" class="canva-panel mt-7 rounded-2xl border border-slate-700 p-5" style="background: rgb(23, 36, 60);">
+       <h2 data-template-id="evidence-heading-1" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Evidence log</h2>
+       <p data-template-id="warehouse-evidence" class="canva-text mt-3 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Temperature is being measured and displayed accurately, but the physical cooling action never occurs.</p>
+      </div>
+      <h2 data-template-id="warehouse-question" class="canva-text mt-8 text-xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 24px;">Which IoT component is responsible?</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5 answer-list"><button data-template-id="warehouse-a1" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Sensor" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Sensor</button><button data-template-id="warehouse-a2" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Connectivity" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Connectivity</button><button data-template-id="warehouse-a3" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Processing Unit" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Processing Unit</button><button data-template-id="warehouse-a4" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Actuator" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Actuator</button>
+      </div><button data-template-id="submit-button-1" class="canva-button primary-action submit-btn hidden-view mt-6 px-7 rounded-xl bg-amber-400 text-slate-950 font-bold" type="button" style="background: rgb(245, 158, 11); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Engineering Finding</button>
+      <div class="feedback hidden-view mt-6 rounded-r-xl bg-slate-900/70 p-5">
+       <h3 data-template-id="feedback-heading-1" class="canva-text font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 19px;">Engineering feedback</h3>
+       <p data-template-id="warehouse-feedback" class="canva-text mt-2 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Sensors successfully detect temperature, and the accurate dashboard reading shows the information is moving through the system. The processor has already determined cooling is needed. An actuator performs physical actions, so because the fan never operates, the actuator is the faulty component.</p>
+      </div><button data-template-id="continue-button-1" class="canva-button primary-action next-btn hidden-view mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" type="button" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Continue to Case 2</button>
+     </div>
+     <div id="case-irrigation" class="investigation case-main mission-panel rounded-3xl p-5 sm:p-8 hidden-view">
+      <p data-template-id="irrigation-scenario" class="canva-text text-lg leading-8 text-slate-100" style="color: rgb(248, 250, 252); font-weight: 400; font-style: normal; font-size: 16px;">Soil moisture is measured correctly. However, farmers cannot view the data remotely. The dashboard never updates.</p>
+      <div data-template-id="irrigation-evidence-panel" class="canva-panel mt-7 rounded-2xl border border-slate-700 p-5" style="background: rgb(23, 36, 60);">
+       <h2 data-template-id="evidence-heading-2" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Evidence log</h2>
+       <p data-template-id="irrigation-evidence" class="canva-text mt-3 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">The field device can take measurements, but no current measurement reaches the remote dashboard.</p>
+      </div>
+      <h2 data-template-id="irrigation-question" class="canva-text mt-8 text-xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 24px;">Which component is responsible?</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5 answer-list">
+       <button data-template-id="irrigation-a1" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Connectivity" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Connectivity</button><button data-template-id="irrigation-a2" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Cloud" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Cloud</button><button data-template-id="irrigation-a3" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Sensor" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Sensor</button><button data-template-id="irrigation-a4" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="User Interface" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">User Interface</button>
+      </div><button data-template-id="submit-button-2" class="canva-button primary-action submit-btn hidden-view mt-6 px-7 rounded-xl bg-amber-400 text-slate-950 font-bold" type="button" style="background: rgb(245, 158, 11); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Engineering Finding</button>
+      <div class="feedback hidden-view mt-6 rounded-r-xl bg-slate-900/70 p-5">
+       <h3 data-template-id="feedback-heading-2" class="canva-text font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 19px;">Engineering feedback</h3>
+       <p data-template-id="irrigation-feedback" class="canva-text mt-2 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Connectivity transfers data between devices and services. The sensor is functioning because measurements exist. Without communication, the cloud cannot receive information for the user interface to display. The failed link is connectivity.</p>
+      </div><button data-template-id="continue-button-2" class="canva-button primary-action next-btn hidden-view mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" type="button" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Continue to Case 3</button>
+     </div>
+     <div id="case-healthcare" class="investigation case-main mission-panel rounded-3xl p-5 sm:p-8 hidden-view">
+      <p data-template-id="healthcare-scenario" class="canva-text text-lg leading-8 text-slate-100" style="color: rgb(248, 250, 252); font-weight: 400; font-style: normal; font-size: 16px;">A wearable device successfully records heart-rate readings. The readings reach the monitoring system. However, abnormal heart-rate alerts are never triggered.</p>
+      <div data-template-id="healthcare-evidence-panel" class="canva-panel mt-7 rounded-2xl border border-slate-700 p-5" style="background: rgb(23, 36, 60);">
+       <h2 data-template-id="evidence-heading-3" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Evidence log</h2>
+       <p data-template-id="healthcare-evidence" class="canva-text mt-3 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Heart-rate data is collected and received, yet no decision or alert is produced from abnormal values.</p>
+      </div>
+      <h2 data-template-id="healthcare-question" class="canva-text mt-8 text-xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 24px;">Which component is responsible?</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5 answer-list">
+       <button data-template-id="healthcare-a1" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Sensor" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Sensor</button><button data-template-id="healthcare-a2" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Processing Unit" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Processing Unit</button><button data-template-id="healthcare-a3" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Cloud" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Cloud</button><button data-template-id="healthcare-a4" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Actuator" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Actuator</button>
+      </div><button data-template-id="submit-button-3" class="canva-button primary-action submit-btn hidden-view mt-6 px-7 rounded-xl bg-amber-400 text-slate-950 font-bold" type="button" style="background: rgb(245, 158, 11); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Engineering Finding</button>
+      <div class="feedback hidden-view mt-6 rounded-r-xl bg-slate-900/70 p-5">
+       <h3 data-template-id="feedback-heading-3" class="canva-text font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 19px;">Engineering feedback</h3>
+       <p data-template-id="healthcare-feedback" class="canva-text mt-2 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">The processing unit analyses incoming data and compares readings against predefined thresholds. The wearable sensor is collecting data and the monitoring system receives it. If alerts are never generated despite abnormal readings, the processing unit is responsible.</p>
+      </div><button data-template-id="continue-button-3" class="canva-button primary-action next-btn hidden-view mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" type="button" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Continue to Case 4</button>
+     </div>
+     <div id="case-factory" class="investigation case-main mission-panel rounded-3xl p-5 sm:p-8 hidden-view">
+      <p data-template-id="factory-scenario" class="canva-text text-lg leading-8 text-slate-100" style="color: rgb(248, 250, 252); font-weight: 400; font-style: normal; font-size: 16px;">Machines continue collecting production data. Operations continue normally. Managers working remotely cannot access historical production reports.</p>
+      <div data-template-id="factory-evidence-panel" class="canva-panel mt-7 rounded-2xl border border-slate-700 p-5" style="background: rgb(23, 36, 60);">
+       <h2 data-template-id="evidence-heading-4" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Evidence log</h2>
+       <p data-template-id="factory-evidence" class="canva-text mt-3 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Production data is still collected locally, but historical records cannot be retrieved by remote managers.</p>
+      </div>
+      <h2 data-template-id="factory-question" class="canva-text mt-8 text-xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 24px;">Which component is responsible?</h2>
+      <div class="grid sm:grid-cols-2 gap-3 mt-5 answer-list">
+       <button data-template-id="factory-a1" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Cloud Platform" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Cloud Platform</button><button data-template-id="factory-a2" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Connectivity" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Connectivity</button><button data-template-id="factory-a3" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Actuator" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Actuator</button><button data-template-id="factory-a4" class="canva-button option-button rounded-xl px-5 text-left font-semibold" data-answer="Sensor" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">Sensor</button>
+      </div><button data-template-id="submit-button-4" class="canva-button primary-action submit-btn hidden-view mt-6 px-7 rounded-xl bg-amber-400 text-slate-950 font-bold" type="button" style="background: rgb(245, 158, 11); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Engineering Finding</button>
+      <div class="feedback hidden-view mt-6 rounded-r-xl bg-slate-900/70 p-5">
+       <h3 data-template-id="feedback-heading-4" class="canva-text font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 19px;">Engineering feedback</h3>
+       <p data-template-id="factory-feedback" class="canva-text mt-2 leading-7 text-slate-200" style="color: rgb(226, 232, 240); font-weight: 400; font-style: normal; font-size: 16px;">Cloud platforms store and manage data for remote access and historical analysis. Since production continues normally, data collection is functioning. The inability to retrieve historical records indicates a cloud platform issue.</p>
+      </div><button data-template-id="continue-button-4" class="canva-button primary-action next-btn hidden-view mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" type="button" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">View Mission Report</button>
      </div>
     </section>
-    <section id="completion" class="screen">
-     <div class="max-w-3xl mx-auto text-center bg-white rounded-3xl shadow-xl shadow-slate-200/70 border border-slate-100 p-8 sm:p-12">
-      <div class="w-20 h-20 mx-auto rounded-full bg-green-100 text-green-600 grid place-items-center pulse-ring">
-       <i data-lucide="badge-check" class="w-10 h-10" aria-hidden="true"></i>
+    <section id="report-view" class="case-view hidden-view max-w-3xl mx-auto">
+     <div class="mission-panel rounded-3xl p-7 sm:p-10 text-center">
+      <p data-template-id="report-kicker" class="canva-text text-sm font-bold tracking-[.18em] uppercase text-cyan-300" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">Operations Centre debrief</p>
+      <h1 data-template-id="report-title" class="canva-text mt-2 text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Mission Complete</h1>
+      <div class="grid sm:grid-cols-3 gap-4 mt-8 text-left">
+       <div class="rounded-2xl bg-slate-900/70 border border-slate-700 p-5">
+        <p data-template-id="report-score-label" class="canva-text text-xs uppercase tracking-wider text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Final score</p>
+        <p id="report-score" class="mt-2 text-3xl font-bold text-emerald-400">0 / 50</p>
+       </div>
+       <div class="rounded-2xl bg-slate-900/70 border border-slate-700 p-5">
+        <p data-template-id="report-solved-label" class="canva-text text-xs uppercase tracking-wider text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Cases solved correctly</p>
+        <p id="report-solved" class="mt-2 text-3xl font-bold text-cyan-300">0 / 5</p>
+       </div>
+       <div class="rounded-2xl bg-slate-900/70 border border-slate-700 p-5">
+        <p data-template-id="report-level-label" class="canva-text text-xs uppercase tracking-wider text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Performance level</p>
+        <p id="report-level" class="mt-2 text-lg font-bold text-amber-300"></p>
+       </div>
       </div>
-      <p data-template-id="completion-kicker" class="canva-text text-xs font-bold tracking-widest uppercase mt-7" style="color: rgb(20, 184, 166); font-weight: 700; font-style: normal; font-size: 16px;">Operation SmartCity</p>
-      <h2 data-template-id="completion-title" class="canva-text heading-font font-bold text-4xl mt-2" style="color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 24px;">Mission Complete</h2>
-      <p data-template-id="completion-message" class="canva-text text-slate-600 leading-7 mt-5 max-w-xl mx-auto" style="color: rgb(71, 85, 105); font-weight: 400; font-style: normal; font-size: 16px;">Congratulations! You have successfully restored the SmartCity systems by correctly identifying the major IoT components.</p>
-      <div class="mt-8 flex flex-col sm:flex-row justify-center gap-3"><button id="replay-btn" type="button" data-template-id="replay-button" class="canva-button inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl font-bold" style="background: rgb(37, 99, 235); color: rgb(255, 255, 255); font-weight: 700; font-style: normal; font-size: 16px;">REPLAY MISSION</button> <button id="portal-btn" type="button" data-template-id="portal-button" class="canva-button inline-flex justify-center items-center gap-2 px-5 py-3 rounded-xl font-bold" style="background: rgb(226, 232, 240); color: rgb(16, 33, 61); font-weight: 700; font-style: normal; font-size: 16px;">RETURN TO PORTAL</button>
+      <div class="mt-6 text-left rounded-2xl border border-cyan-400/30 bg-cyan-400/5 p-5">
+       <h2 data-template-id="summary-heading" class="canva-text font-bold text-cyan-200" style="color: rgb(207, 250, 254); font-weight: 700; font-style: normal; font-size: 24px;">Engineering Summary</h2>
+       <p id="report-summary" class="mt-2 text-slate-200 leading-7"></p>
+      </div><button id="reflection-btn" data-template-id="reflection-button" type="button" class="canva-button primary-action mt-8 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Continue to Reflection</button>
+     </div>
+    </section>
+    <section id="reflection-view" class="case-view hidden-view max-w-3xl mx-auto">
+     <div class="mission-panel rounded-3xl p-7 sm:p-10">
+      <p data-template-id="reflection-kicker" class="canva-text text-sm font-bold tracking-[.18em] uppercase text-cyan-300" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">Engineer reflection</p>
+      <h1 data-template-id="reflection-title" class="canva-text mt-2 text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Reflection</h1><label data-template-id="reflection-question" class="canva-text block mt-7 text-lg font-semibold leading-7" for="reflection-input" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">A smart parking system automatically detects empty parking spaces and updates a mobile application. Which IoT component do you believe is most critical? Why?</label> <textarea id="reflection-input" class="mt-4 w-full min-h-40 rounded-2xl border border-slate-600 bg-slate-950/70 p-4 text-slate-100" aria-describedby="reflection-help"></textarea>
+      <p id="reflection-help" data-template-id="reflection-help-text" class="canva-text mt-3 text-sm text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Write your reasoning before completing the mission. Your reflection is not graded.</p>
+      <p id="reflection-error" data-template-id="reflection-error-text" class="canva-text hidden-view mt-3 text-sm font-semibold text-red-300" role="alert" style="color: rgb(252, 165, 165); font-weight: 600; font-style: normal; font-size: 16px;">Please enter a reflection response before continuing.</p><button id="complete-btn" data-template-id="complete-button" type="button" class="canva-button primary-action mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Complete Mission</button>
+     </div>
+    </section>
+    <section id="complete-view" class="case-view hidden-view max-w-3xl mx-auto">
+     <div class="mission-panel rounded-3xl p-8 sm:p-12 text-center">
+      <div class="mx-auto w-16 h-16 rounded-full bg-emerald-400/15 border border-emerald-400/50 flex items-center justify-center text-emerald-300">
+       <i data-lucide="check-circle-2" width="34" height="34"></i>
       </div>
-      <p id="portal-message" data-template-id="portal-message" class="canva-text hidden mt-5 text-sm font-medium" aria-live="polite" style="color: rgb(15, 118, 110); font-weight: 600; font-style: normal; font-size: 16px;">Mission completed. Return to the main portal to continue your learning journey.</p>
+      <h1 data-template-id="complete-title" class="canva-text mt-6 text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Congratulations Engineer.</h1>
+      <p data-template-id="complete-message" class="canva-text mt-4 text-slate-300 leading-7" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Mission completed. Return to the main portal to continue your learning journey.</p>
+      <div class="flex flex-col sm:flex-row justify-center gap-3 mt-8">
+       <button id="replay-btn" data-template-id="replay-button" type="button" class="canva-button primary-action px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Replay Mission</button><button id="portal-btn" data-template-id="portal-button" type="button" class="canva-button primary-action px-7 rounded-xl border border-slate-500 bg-slate-800 text-slate-100 font-bold" style="background: rgb(30, 41, 59); color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 16px;">Return to Main Portal</button>
+      </div>
      </div>
     </section>
    </main>
   </div>
-  <script src="/_sdk/2280186206604737.editing_sdk.js" integrity="sha512-ytKEpZw6fOmEohq8vgEbM2NWpbQ2jh3cM69uEIo2rmwQWi65aUtyUpjwb3CrbGRWV4sVVbh39NAMb25XohcCOw=="></script>
+  <script src="/_sdk/b23f1f6ec78e9bd4.editing_sdk.js" integrity="sha512-WFdQutvUZzxrmcHkL8cbfuFDTeF8Cn8Bt3yqX/a/OdiqPz/t9UcjsIsZK7D+tMTmC2JTwhwRJNyfcHmIWhG8Wg=="></script>
   <script>
     const cases = [
-      {
-        title: "Smart Greenhouse", icon: "sprout",
-        scenario: "The greenhouse continuously measures:\n• temperature\n• humidity\n• soil moisture\n• light intensity",
-        question: "Which IoT component performs this task?",
-        choices: ["Sensor", "Cloud Platform", "Actuator", "User Interface"], correct: 0,
-        correctHeading: "Correct!", correctText: "Sensors collect information from the environment.\n\nThey are the starting point of almost every IoT system because they detect changes and convert them into data.",
-        incorrectHeading: "Not quite.", incorrectText: "Cloud platforms store data.\nActuators perform physical actions.\nUser interfaces allow people to interact with the system.\n\nThe component responsible for measuring environmental conditions is the Sensor."
-      },
-      {
-        title: "Smart Warehouse", icon: "warehouse",
-        scenario: "Temperature data has already been collected.\n\nThe system must decide whether cooling fans should start automatically.",
-        question: "Which IoT component makes this decision?",
-        choices: ["Sensor", "Processing Unit", "Connectivity", "User Interface"], correct: 1,
-        correctHeading: "Correct!", correctText: "Processing Units receive data from sensors.\n\nThey analyse the information and compare it with predefined conditions before deciding whether action is required.",
-        incorrectHeading: "Remember:", incorrectText: "Sensors only collect data.\nProcessing Units analyse data and make decisions."
-      },
-      {
-        title: "Smart Home", icon: "house",
-        scenario: "A smart thermostat needs to send temperature readings from the house to a cloud server.",
-        question: "Which component is responsible?",
-        choices: ["Connectivity", "Actuator", "Cloud Platform", "Sensor"], correct: 0,
-        correctHeading: "Correct!", correctText: "Connectivity enables communication between devices using technologies such as Wi-Fi, Bluetooth, Cellular and LoRaWAN.",
-        incorrectHeading: "Not quite.", incorrectText: "Cloud platforms store information.\nConnectivity is responsible for transmitting data."
-      },
-      {
-        title: "Smart Factory", icon: "factory",
-        scenario: "A factory manager wants to monitor production from another city using historical machine data.",
-        question: "Which IoT component makes this possible?",
-        choices: ["Cloud Platform", "Sensor", "Processing Unit", "Actuator"], correct: 0,
-        correctHeading: "Excellent.", correctText: "Cloud platforms provide:\n\nRemote monitoring\nLong-term storage\nDashboards\nData analytics",
-        incorrectHeading: "Not quite.", incorrectText: "The processor analyses local data.\nThe cloud stores, manages and presents information remotely."
-      },
-      {
-        title: "Smart Fire Safety", icon: "siren",
-        scenario: "Smoke has been detected.\n\nThe emergency alarm begins sounding automatically.",
-        question: "Which IoT component performs this physical action?",
-        choices: ["Actuator", "Connectivity", "Cloud Platform", "Sensor"], correct: 0,
-        correctHeading: "Correct!", correctText: "Actuators convert digital decisions into physical actions.\n\nExamples include motors, alarms, pumps, fans and smart locks.",
-        incorrectHeading: "Not quite.", incorrectText: "Sensors detect smoke.\nActuators activate the alarm."
-      }
+      { id:"case-practice", kicker:"Practice Case", title:"Smart Greenhouse", correct:"Sensor" },
+      { id:"case-warehouse", kicker:"Case 1", title:"Smart Warehouse", correct:"Actuator" },
+      { id:"case-irrigation", kicker:"Case 2", title:"Smart Irrigation", correct:"Connectivity" },
+      { id:"case-healthcare", kicker:"Case 3", title:"Smart Healthcare", correct:"Processing Unit" },
+      { id:"case-factory", kicker:"Case 4", title:"Smart Factory", correct:"Cloud Platform" }
     ];
+    let current = 0, score = 0, solved = 0, selected = null;
+    const views = ["briefing-view","howto-view","investigation-view","report-view","reflection-view","complete-view"];
 
-    let currentCase = 0, selectedChoice = null, score = 0, firstAttemptCorrect = 0;
-    let attempts = [0, 0, 0, 0, 0], completed = [false, false, false, false, false];
-
-    const $ = id => document.getElementById(id);
-
-    function showScreen(id, missionMode = false) {
-      document.querySelectorAll(".screen").forEach(screen => screen.classList.remove("active"));
-      $(id).classList.add("active");
-      $("mission-header").classList.toggle("hidden", !missionMode);
-      window.scrollTo({ top: 0, behavior: "smooth" });
+    function showView(id) {
+      views.forEach(view => document.getElementById(view).classList.toggle("hidden-view", view !== id));
+      window.scrollTo({top:0, behavior:"smooth"});
     }
-
-    function updateHeader() {
-      const done = completed.filter(Boolean).length;
-      $("score-display").textContent = score + " / 50";
-      $("case-display").textContent = "Case " + Math.min(currentCase + 1, 5) + " / 5";
-      $("completion-display").textContent = Math.round((done / 5) * 100) + "% complete";
-      $("progress-fill").style.width = (done / 5) * 100 + "%";
-      document.querySelectorAll(".progress-step").forEach((step, index) => {
-        step.classList.remove("done", "current");
-        if (completed[index]) step.classList.add("done");
-        else if (index === currentCase && done < 5) step.classList.add("current");
-      });
+    function updateStatus() {
+      document.getElementById("case-count").textContent = `${current} / 5`;
+      document.getElementById("score-count").textContent = `${score} / 50`;
+      document.getElementById("progress-fill").style.width = `${current * 20}%`;
     }
-
-    function renderCase() {
-      const item = cases[currentCase];
-      selectedChoice = null;
-      $("case-title").textContent = item.title;
-      $("case-scenario").textContent = item.scenario;
-      $("case-question").textContent = item.question;
-      $("correct-heading").textContent = item.correctHeading;
-      $("correct-text").textContent = item.correctText;
-      $("incorrect-heading").textContent = item.incorrectHeading;
-      $("incorrect-text").textContent = item.incorrectText;
-      $("selection-note").textContent = "";
-      $("submit-answer").disabled = true;
-      $("feedback-correct").classList.remove("visible");
-      $("feedback-incorrect").classList.remove("visible");
-      $("continue-wrap").classList.add("hidden");
-
-      const icon = $("case-icon");
-      icon.setAttribute("data-lucide", item.icon);
-      const choiceList = $("choice-list");
-      choiceList.innerHTML = "";
-      item.choices.forEach((choice, index) => {
-        const button = document.createElement("button");
-        button.type = "button";
-        button.className = "choice-card text-left rounded-xl p-4 flex items-center gap-3 font-semibold text-slate-700";
-        button.setAttribute("role", "radio");
-        button.setAttribute("aria-checked", "false");
-        button.innerHTML = '<span class="w-8 h-8 rounded-lg bg-slate-100 text-slate-500 grid place-items-center text-sm font-bold flex-none">' + String.fromCharCode(65 + index) + '</span><span>' + choice + '</span>';
-        button.addEventListener("click", () => selectChoice(index));
-        choiceList.appendChild(button);
-      });
-      updateHeader();
-      lucide.createIcons();
+    function showCase(index) {
+      current = index;
+      document.querySelectorAll(".investigation").forEach(el => el.classList.add("hidden-view"));
+      const item = cases[index];
+      document.getElementById(item.id).classList.remove("hidden-view");
+      document.getElementById("case-kicker").textContent = item.kicker;
+      document.getElementById("case-title").textContent = item.title;
+      selected = null;
+      updateStatus();
+      showView("investigation-view");
     }
-
-    function selectChoice(index) {
-      if (completed[currentCase]) return;
-      selectedChoice = index;
-      [...$("choice-list").children].forEach((button, buttonIndex) => {
-        button.classList.toggle("selected", buttonIndex === index);
-        button.setAttribute("aria-checked", String(buttonIndex === index));
-      });
-      $("submit-answer").disabled = false;
-      $("selection-note").textContent = "Answer selected. Submit when ready.";
+    function resetCase(caseEl) {
+      caseEl.querySelectorAll(".option-button").forEach(btn => { btn.disabled=false; btn.classList.remove("is-selected","is-correct","is-wrong"); btn.setAttribute("aria-pressed","false"); });
+      caseEl.querySelector(".submit-btn").classList.add("hidden-view");
+      caseEl.querySelector(".feedback").classList.add("hidden-view");
+      caseEl.querySelector(".next-btn").classList.add("hidden-view");
     }
-
-    function submitAnswer() {
-      if (selectedChoice === null || completed[currentCase]) return;
-      const item = cases[currentCase];
-      attempts[currentCase] += 1;
-      const buttons = [...$("choice-list").children];
-
-      if (selectedChoice === item.correct) {
-        const earned = attempts[currentCase] === 1 ? 10 : attempts[currentCase] === 2 ? 5 : 0;
-        score += earned;
-        if (attempts[currentCase] === 1) firstAttemptCorrect += 1;
-        completed[currentCase] = true;
-        buttons.forEach((button, index) => {
+    document.querySelectorAll(".investigation").forEach((caseEl, caseIndex) => {
+      const buttons = caseEl.querySelectorAll(".option-button");
+      buttons.forEach(button => button.addEventListener("click", () => {
+        if (button.disabled) return;
+        buttons.forEach(item => { item.classList.remove("is-selected"); item.setAttribute("aria-pressed","false"); });
+        button.classList.add("is-selected"); button.setAttribute("aria-pressed","true");
+        selected = button.dataset.answer;
+        caseEl.querySelector(".submit-btn").classList.remove("hidden-view");
+      }));
+      caseEl.querySelector(".submit-btn").addEventListener("click", () => {
+        if (!selected) return;
+        const correct = cases[caseIndex].correct;
+        const isCorrect = selected === correct;
+        buttons.forEach(button => {
           button.disabled = true;
-          if (index === item.correct) button.classList.add("correct-choice");
+          if (button.dataset.answer === correct) button.classList.add("is-correct");
+          if (!isCorrect && button.dataset.answer === selected) button.classList.add("is-wrong");
         });
-        $("feedback-incorrect").classList.remove("visible");
-        $("feedback-correct").classList.add("visible");
-        $("continue-wrap").classList.remove("hidden");
-        $("submit-answer").disabled = true;
-        $("selection-note").textContent = earned > 0 ? "+" + earned + " points awarded." : "Correct — case restored.";
-        updateHeader();
-      } else {
-        buttons[selectedChoice].classList.add("wrong-choice");
-        $("feedback-correct").classList.remove("visible");
-        $("feedback-incorrect").classList.add("visible");
-        $("selection-note").textContent = "Review the explanation, then choose another answer.";
-        $("submit-answer").disabled = true;
-        setTimeout(() => {
-          buttons[selectedChoice].classList.remove("wrong-choice", "selected");
-          buttons[selectedChoice].setAttribute("aria-checked", "false");
-          selectedChoice = null;
-        }, 700);
-      }
-    }
-
-    function showReport() {
-      $("report-score").textContent = score + " / 50";
-      $("report-first").textContent = firstAttemptCorrect + " / 5";
-      const percent = Math.round((score / 50) * 100);
-      $("report-percent").textContent = percent + "%";
-      $("report-meter-fill").style.width = percent + "%";
-
-      let badge, summary;
-      if (score >= 45) {
-        badge = "SmartCity Expert";
-        summary = "Outstanding investigation work. You confidently identified the major components and their roles across each SmartCity system.";
-      } else if (score >= 35) {
-        badge = "Skilled IoT Engineer";
-        summary = "Strong work. You understand how most IoT components support data collection, decisions, communication and action. Review any missed explanations to sharpen your confidence.";
-      } else if (score >= 25) {
-        badge = "Junior Technician";
-        summary = "A solid foundation is developing. Revisit the links between sensors, processing, connectivity and cloud services to strengthen your IoT system knowledge.";
-      } else {
-        badge = "Needs More Investigation";
-        summary = "Keep investigating. Review each case explanation and try the mission again to build a clearer picture of how IoT components work together.";
-      }
-      $("report-badge").textContent = badge;
-      $("report-summary").textContent = summary;
-      showScreen("report", true);
-    }
-
-    function resetMission() {
-      currentCase = 0; selectedChoice = null; score = 0; firstAttemptCorrect = 0;
-      attempts = [0, 0, 0, 0, 0]; completed = [false, false, false, false, false];
-      $("reflection-input").value = "";
-      $("portal-message").classList.add("hidden");
-      updateHeader();
-      showScreen("welcome", false);
-    }
-
-    $("start-btn").addEventListener("click", () => showScreen("briefing", true));
-    $("briefing-next").addEventListener("click", () => showScreen("how-to-play", true));
-    $("instructions-next").addEventListener("click", () => { showScreen("game", true); renderCase(); });
-    $("submit-answer").addEventListener("click", submitAnswer);
-    $("continue-case").addEventListener("click", () => {
-      if (currentCase < 4) { currentCase += 1; renderCase(); }
-      else showReport();
+        if (isCorrect) { score += 10; solved += 1; }
+        const feedback = caseEl.querySelector(".feedback");
+        feedback.classList.remove("hidden-view");
+        feedback.classList.toggle("success", isCorrect);
+        feedback.classList.toggle("error", !isCorrect);
+        caseEl.querySelector(".submit-btn").classList.add("hidden-view");
+        caseEl.querySelector(".next-btn").classList.remove("hidden-view");
+        updateStatus();
+      });
+      caseEl.querySelector(".next-btn").addEventListener("click", () => {
+        if (caseIndex < cases.length - 1) showCase(caseIndex + 1); else showReport();
+      });
     });
-    $("report-next").addEventListener("click", () => showScreen("reflection", true));
-    $("reflection-form").addEventListener("submit", event => { event.preventDefault(); showScreen("completion", true); });
-    $("replay-btn").addEventListener("click", resetMission);
-    $("portal-btn").addEventListener("click", () => $("portal-message").classList.remove("hidden"));
-
-    document.addEventListener("DOMContentLoaded", () => lucide.createIcons());
+    function showReport() {
+      document.getElementById("report-score").textContent = `${score} / 50`;
+      document.getElementById("report-solved").textContent = `${solved} / 5`;
+      let level, summary;
+      if (score >= 45) { level="IoT Component Expert"; summary="Excellent work. You accurately distinguished the purpose of each IoT component and used the evidence to diagnose each SmartCity incident."; }
+      else if (score >= 35) { level="Systems Analyst"; summary="Strong engineering reasoning. Review the evidence chain in the investigations you missed, then you will be ready to diagnose more complex IoT systems."; }
+      else if (score >= 25) { level="Junior Engineer"; summary="You have a useful foundation. Review how Processing Units differ from Sensors and how Connectivity differs from Cloud Platforms before attempting the mission again."; }
+      else { level="Field Trainee"; summary="Continue building your diagnostic skills. Revisit the purpose of Sensors, Connectivity, Processing Units, Cloud Platforms, Actuators, and User Interfaces, then replay the mission."; }
+      document.getElementById("report-level").textContent = level;
+      document.getElementById("report-summary").textContent = summary;
+      showView("report-view");
+    }
+    function replay() {
+      score=0; solved=0; current=0; selected=null;
+      document.querySelectorAll(".investigation").forEach(resetCase);
+      document.getElementById("reflection-input").value="";
+      document.getElementById("reflection-error").classList.add("hidden-view");
+      updateStatus(); showView("briefing-view");
+    }
+    document.getElementById("start-btn").addEventListener("click", () => showView("howto-view"));
+    document.getElementById("begin-practice-btn").addEventListener("click", () => showCase(0));
+    document.getElementById("reflection-btn").addEventListener("click", () => showView("reflection-view"));
+    document.getElementById("complete-btn").addEventListener("click", () => {
+      const reflection = document.getElementById("reflection-input");
+      const error = document.getElementById("reflection-error");
+      if (!reflection.value.trim()) { error.classList.remove("hidden-view"); reflection.focus(); return; }
+      error.classList.add("hidden-view"); showView("complete-view");
+    });
+    document.getElementById("replay-btn").addEventListener("click", replay);
+    document.getElementById("portal-btn").addEventListener("click", replay);
+    lucide.createIcons();
+    updateStatus();
   </script>
  
 </body></html>
