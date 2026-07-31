@@ -29,6 +29,12 @@
     .feedback.success { border-left-color:var(--green); }
     .feedback.error { border-left-color:var(--red); }
     textarea { resize:vertical; }
+    .student-strip { margin-top:1.25rem; padding:1rem 1.1rem; border:1px solid rgba(34,211,238,.3); border-radius:1rem; background:rgba(15,23,42,.62); }
+    .student-strip strong { color:#a5f3fc; }
+    .submission-status { min-height:1.5rem; margin-top:.85rem; font-weight:600; }
+    .submission-status.success { color:#86efac; }
+    .submission-status.error { color:#fca5a5; }
+    .submission-status.info { color:#fde68a; }
     @media (max-width:640px) { .case-main { padding:1rem; } .header-copy { display:none; } }
   </style>
   <script src="/_sdk/935a53bc2e11fb8d.data_sdk.js" type="text/javascript" integrity="sha512-qr2oyPnEys1WebcOABaRh6hG77r5PWpqeWW6JTKbRJqly/INsfBi31CVNlTmHqjgeLpkVmmHZJUdxSx/32tOFQ=="></script>
@@ -71,6 +77,11 @@
        </div>
        <p data-template-id="mission-number" class="canva-text text-sm font-bold tracking-[.2em] uppercase text-amber-300" style="color: rgb(252, 211, 77); font-weight: 700; font-style: normal; font-size: 16px;">Mission 1</p>
        <h1 data-template-id="mission-title" class="canva-text mt-2 text-4xl sm:text-5xl font-bold tracking-tight" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Component Detective</h1>
+       <div id="student-strip" class="student-strip" aria-live="polite">
+        <p class="text-xs uppercase tracking-wider text-slate-400">Active student</p>
+        <p class="mt-1"><strong id="active-student-name">Not identified</strong> · <span id="active-student-id">—</span> · <span id="active-student-class">—</span></p>
+        <p id="student-warning" class="mt-2 text-sm text-amber-200 hidden-view">Return to the main portal and save your student details before starting this mission.</p>
+       </div>
        <div class="mt-8 border-l-2 border-cyan-400 pl-5 space-y-4">
         <p data-template-id="briefing-welcome" class="canva-text text-xl font-semibold text-cyan-100" style="color: rgb(207, 250, 254); font-weight: 600; font-style: normal; font-size: 16px;">Welcome Engineer.</p>
         <p data-template-id="briefing-copy" class="canva-text text-slate-300 leading-7" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Several SmartCity IoT systems have failed. Your mission is to investigate each incident and determine which IoT component is responsible.</p>
@@ -214,7 +225,9 @@
       <p data-template-id="reflection-kicker" class="canva-text text-sm font-bold tracking-[.18em] uppercase text-cyan-300" style="color: rgb(34, 211, 238); font-weight: 700; font-style: normal; font-size: 16px;">Engineer reflection</p>
       <h1 data-template-id="reflection-title" class="canva-text mt-2 text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Reflection</h1><label data-template-id="reflection-question" class="canva-text block mt-7 text-lg font-semibold leading-7" for="reflection-input" style="color: rgb(248, 250, 252); font-weight: 600; font-style: normal; font-size: 16px;">A smart parking system automatically detects empty parking spaces and updates a mobile application. Which IoT component do you believe is most critical? Why?</label> <textarea id="reflection-input" class="mt-4 w-full min-h-40 rounded-2xl border border-slate-600 bg-slate-950/70 p-4 text-slate-100" aria-describedby="reflection-help"></textarea>
       <p id="reflection-help" data-template-id="reflection-help-text" class="canva-text mt-3 text-sm text-slate-400" style="color: rgb(148, 163, 184); font-weight: 400; font-style: normal; font-size: 16px;">Write your reasoning before completing the mission. Your reflection is not graded.</p>
-      <p id="reflection-error" data-template-id="reflection-error-text" class="canva-text hidden-view mt-3 text-sm font-semibold text-red-300" role="alert" style="color: rgb(252, 165, 165); font-weight: 600; font-style: normal; font-size: 16px;">Please enter a reflection response before continuing.</p><button id="complete-btn" data-template-id="complete-button" type="button" class="canva-button primary-action mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Complete Mission</button>
+      <p id="reflection-error" data-template-id="reflection-error-text" class="canva-text hidden-view mt-3 text-sm font-semibold text-red-300" role="alert" style="color: rgb(252, 165, 165); font-weight: 600; font-style: normal; font-size: 16px;">Please enter a reflection response before continuing.</p>
+      <p id="submission-status" class="submission-status" role="status" aria-live="polite"></p>
+      <button id="complete-btn" data-template-id="complete-button" type="button" class="canva-button primary-action mt-6 px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Submit Reflection &amp; Complete Mission</button>
      </div>
     </section>
     <section id="complete-view" class="case-view hidden-view max-w-3xl mx-auto">
@@ -223,7 +236,8 @@
        <i data-lucide="check-circle-2" width="34" height="34"></i>
       </div>
       <h1 data-template-id="complete-title" class="canva-text mt-6 text-4xl font-bold" style="color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 32px;">Congratulations Engineer.</h1>
-      <p data-template-id="complete-message" class="canva-text mt-4 text-slate-300 leading-7" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Mission completed. Return to the main portal to continue your learning journey.</p>
+      <p data-template-id="complete-message" class="canva-text mt-4 text-slate-300 leading-7" style="color: rgb(203, 213, 225); font-weight: 400; font-style: normal; font-size: 16px;">Mission completed and your reflection has been submitted. Return to the main portal to continue your learning journey.</p>
+      <p id="submission-reference" class="mt-3 text-sm text-emerald-300"></p>
       <div class="flex flex-col sm:flex-row justify-center gap-3 mt-8">
        <button id="replay-btn" data-template-id="replay-button" type="button" class="canva-button primary-action px-7 rounded-xl bg-cyan-400 text-slate-950 font-bold" style="background: rgb(34, 211, 238); color: rgb(15, 23, 42); font-weight: 700; font-style: normal; font-size: 16px;">Replay Mission</button><button id="portal-btn" data-template-id="portal-button" type="button" class="canva-button primary-action px-7 rounded-xl border border-slate-500 bg-slate-800 text-slate-100 font-bold" style="background: rgb(30, 41, 59); color: rgb(248, 250, 252); font-weight: 700; font-style: normal; font-size: 16px;">Return to Main Portal</button>
       </div>
@@ -233,6 +247,15 @@
   </div>
   <script src="/_sdk/b23f1f6ec78e9bd4.editing_sdk.js" integrity="sha512-WFdQutvUZzxrmcHkL8cbfuFDTeF8Cn8Bt3yqX/a/OdiqPz/t9UcjsIsZK7D+tMTmC2JTwhwRJNyfcHmIWhG8Wg=="></script>
   <script>
+    const WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwUHRA6dH9Y4zCPPLdU_3VrQS06ix7qyAhMtdtdfa1Ow8ymwvrEPpOi6qZsRdCTKmK4/exec";
+    const PORTAL_URL = "https://mohamadfauziml.github.io/Operation-SmartCity/";
+    const GAME_ID = "OSC101";
+    const MISSION_ID = "M1";
+    const STUDENT_KEY = "ogfStudent";
+    const STATE_KEY = `${GAME_ID}_${MISSION_ID}_state`;
+    const REFLECTION_KEY = `${GAME_ID}_${MISSION_ID}_reflectionDraft`;
+    const COMPLETED_KEY = `${GAME_ID}_${MISSION_ID}_completed`;
+
     const cases = [
       { id:"case-practice", kicker:"Practice Case", title:"Smart Greenhouse", correct:"Sensor" },
       { id:"case-warehouse", kicker:"Case 1", title:"Smart Warehouse", correct:"Actuator" },
@@ -240,18 +263,54 @@
       { id:"case-healthcare", kicker:"Case 3", title:"Smart Healthcare", correct:"Processing Unit" },
       { id:"case-factory", kicker:"Case 4", title:"Smart Factory", correct:"Cloud Platform" }
     ];
+
     let current = 0, score = 0, solved = 0, selected = null;
     const views = ["briefing-view","howto-view","investigation-view","report-view","reflection-view","complete-view"];
+
+    function getStudent() {
+      try {
+        const profile = JSON.parse(localStorage.getItem(STUDENT_KEY) || localStorage.getItem(`${GAME_ID}_student`) || "null");
+        if (profile?.studentName && profile?.studentId && profile?.studentClass) return profile;
+      } catch (_) {}
+      const studentName = localStorage.getItem("ogfStudentName");
+      const studentId = localStorage.getItem("ogfStudentId");
+      const studentClass = localStorage.getItem("ogfStudentClass");
+      return studentName && studentId && studentClass ? { studentName, studentId, studentClass } : null;
+    }
+
+    function renderStudent() {
+      const profile = getStudent();
+      const startButton = document.getElementById("start-btn");
+      if (!profile) {
+        document.getElementById("student-warning").classList.remove("hidden-view");
+        startButton.textContent = "Return to Main Portal";
+        return null;
+      }
+      document.getElementById("active-student-name").textContent = profile.studentName;
+      document.getElementById("active-student-id").textContent = profile.studentId;
+      document.getElementById("active-student-class").textContent = profile.studentClass;
+      return profile;
+    }
+
+    function saveLocalState(extra = {}) {
+      localStorage.setItem(STATE_KEY, JSON.stringify({
+        score, solved, current,
+        updatedAt: new Date().toISOString(),
+        ...extra
+      }));
+    }
 
     function showView(id) {
       views.forEach(view => document.getElementById(view).classList.toggle("hidden-view", view !== id));
       window.scrollTo({top:0, behavior:"smooth"});
     }
+
     function updateStatus() {
       document.getElementById("case-count").textContent = `${current} / 5`;
       document.getElementById("score-count").textContent = `${score} / 50`;
       document.getElementById("progress-fill").style.width = `${current * 20}%`;
     }
+
     function showCase(index) {
       current = index;
       document.querySelectorAll(".investigation").forEach(el => el.classList.add("hidden-view"));
@@ -261,23 +320,32 @@
       document.getElementById("case-title").textContent = item.title;
       selected = null;
       updateStatus();
+      saveLocalState({ stage:"investigation" });
       showView("investigation-view");
     }
+
     function resetCase(caseEl) {
-      caseEl.querySelectorAll(".option-button").forEach(btn => { btn.disabled=false; btn.classList.remove("is-selected","is-correct","is-wrong"); btn.setAttribute("aria-pressed","false"); });
+      caseEl.querySelectorAll(".option-button").forEach(btn => {
+        btn.disabled=false;
+        btn.classList.remove("is-selected","is-correct","is-wrong");
+        btn.setAttribute("aria-pressed","false");
+      });
       caseEl.querySelector(".submit-btn").classList.add("hidden-view");
       caseEl.querySelector(".feedback").classList.add("hidden-view");
       caseEl.querySelector(".next-btn").classList.add("hidden-view");
     }
+
     document.querySelectorAll(".investigation").forEach((caseEl, caseIndex) => {
       const buttons = caseEl.querySelectorAll(".option-button");
       buttons.forEach(button => button.addEventListener("click", () => {
         if (button.disabled) return;
         buttons.forEach(item => { item.classList.remove("is-selected"); item.setAttribute("aria-pressed","false"); });
-        button.classList.add("is-selected"); button.setAttribute("aria-pressed","true");
+        button.classList.add("is-selected");
+        button.setAttribute("aria-pressed","true");
         selected = button.dataset.answer;
         caseEl.querySelector(".submit-btn").classList.remove("hidden-view");
       }));
+
       caseEl.querySelector(".submit-btn").addEventListener("click", () => {
         if (!selected) return;
         const correct = cases[caseIndex].correct;
@@ -295,11 +363,15 @@
         caseEl.querySelector(".submit-btn").classList.add("hidden-view");
         caseEl.querySelector(".next-btn").classList.remove("hidden-view");
         updateStatus();
+        saveLocalState({ stage:"case-reviewed", caseIndex, selectedAnswer:selected, correct:isCorrect });
       });
+
       caseEl.querySelector(".next-btn").addEventListener("click", () => {
-        if (caseIndex < cases.length - 1) showCase(caseIndex + 1); else showReport();
+        if (caseIndex < cases.length - 1) showCase(caseIndex + 1);
+        else showReport();
       });
     });
+
     function showReport() {
       document.getElementById("report-score").textContent = `${score} / 50`;
       document.getElementById("report-solved").textContent = `${solved} / 5`;
@@ -310,26 +382,115 @@
       else { level="Field Trainee"; summary="Continue building your diagnostic skills. Revisit the purpose of Sensors, Connectivity, Processing Units, Cloud Platforms, Actuators, and User Interfaces, then replay the mission."; }
       document.getElementById("report-level").textContent = level;
       document.getElementById("report-summary").textContent = summary;
+      saveLocalState({ stage:"report", level });
       showView("report-view");
     }
+
     function replay() {
       score=0; solved=0; current=0; selected=null;
       document.querySelectorAll(".investigation").forEach(resetCase);
       document.getElementById("reflection-input").value="";
       document.getElementById("reflection-error").classList.add("hidden-view");
-      updateStatus(); showView("briefing-view");
+      document.getElementById("submission-status").textContent="";
+      localStorage.removeItem(STATE_KEY);
+      localStorage.removeItem(REFLECTION_KEY);
+      updateStatus();
+      showView("briefing-view");
     }
-    document.getElementById("start-btn").addEventListener("click", () => showView("howto-view"));
+
+    async function submitMission() {
+      const profile = getStudent();
+      const reflectionInput = document.getElementById("reflection-input");
+      const reflection = reflectionInput.value.trim();
+      const error = document.getElementById("reflection-error");
+      const status = document.getElementById("submission-status");
+      const button = document.getElementById("complete-btn");
+
+      if (!profile) {
+        status.className = "submission-status error";
+        status.textContent = "Student details are missing. Return to the main portal and save your profile first.";
+        return;
+      }
+      if (!reflection) {
+        error.classList.remove("hidden-view");
+        reflectionInput.focus();
+        return;
+      }
+
+      error.classList.add("hidden-view");
+      localStorage.setItem(REFLECTION_KEY, reflection);
+      saveLocalState({ stage:"ready-to-submit", reflection });
+
+      const payload = {
+        action: "submitReflection",
+        gameId: GAME_ID,
+        missionId: MISSION_ID,
+        studentId: profile.studentId,
+        studentName: profile.studentName,
+        studentClass: profile.studentClass,
+        score,
+        maxScore: 50,
+        percentage: Math.round((score / 50) * 100),
+        reflection,
+        status: "Completed",
+        clientTimestamp: new Date().toISOString()
+      };
+
+      button.disabled = true;
+      button.textContent = "Submitting...";
+      status.className = "submission-status info";
+      status.textContent = "Submitting your mission result and reflection...";
+
+      try {
+        const response = await fetch(WEB_APP_URL, {
+          method: "POST",
+          headers: { "Content-Type": "text/plain;charset=utf-8" },
+          body: JSON.stringify(payload)
+        });
+        const result = await response.json();
+        if (!result.success) throw new Error(result.error || "Submission failed.");
+
+        localStorage.setItem(COMPLETED_KEY, "true");
+        localStorage.setItem(`${GAME_ID}_missionChecklist`, JSON.stringify([true,
+          localStorage.getItem(`${GAME_ID}_M2_completed`) === "true",
+          localStorage.getItem(`${GAME_ID}_M3_completed`) === "true",
+          localStorage.getItem(`${GAME_ID}_M4_completed`) === "true"
+        ]));
+        localStorage.removeItem(REFLECTION_KEY);
+        saveLocalState({ stage:"submitted", submitted:true, attemptNo:result.attemptNo || "" });
+
+        document.getElementById("submission-reference").textContent = result.attemptNo ? `Submission recorded · Attempt ${result.attemptNo}` : "Submission recorded successfully.";
+        status.className = "submission-status success";
+        status.textContent = "Reflection submitted successfully.";
+        showView("complete-view");
+      } catch (err) {
+        console.error(err);
+        status.className = "submission-status error";
+        status.textContent = "Submission failed. Your score and reflection remain saved on this device. Please check your connection and try again.";
+      } finally {
+        button.disabled = false;
+        button.textContent = "Submit Reflection & Complete Mission";
+      }
+    }
+
+    document.getElementById("start-btn").addEventListener("click", () => {
+      if (!getStudent()) { window.location.href = PORTAL_URL; return; }
+      showView("howto-view");
+    });
     document.getElementById("begin-practice-btn").addEventListener("click", () => showCase(0));
     document.getElementById("reflection-btn").addEventListener("click", () => showView("reflection-view"));
-    document.getElementById("complete-btn").addEventListener("click", () => {
-      const reflection = document.getElementById("reflection-input");
-      const error = document.getElementById("reflection-error");
-      if (!reflection.value.trim()) { error.classList.remove("hidden-view"); reflection.focus(); return; }
-      error.classList.add("hidden-view"); showView("complete-view");
-    });
+    document.getElementById("complete-btn").addEventListener("click", submitMission);
     document.getElementById("replay-btn").addEventListener("click", replay);
-    document.getElementById("portal-btn").addEventListener("click", replay);
+    document.getElementById("portal-btn").addEventListener("click", () => { window.location.href = PORTAL_URL; });
+
+    const reflectionInput = document.getElementById("reflection-input");
+    reflectionInput.value = localStorage.getItem(REFLECTION_KEY) || "";
+    reflectionInput.addEventListener("input", () => {
+      localStorage.setItem(REFLECTION_KEY, reflectionInput.value);
+      saveLocalState({ stage:"reflection", reflection:reflectionInput.value });
+    });
+
+    renderStudent();
     lucide.createIcons();
     updateStatus();
   </script>
